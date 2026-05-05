@@ -5,10 +5,10 @@ project(elephant_joke LANGUAGES CXX)
 find_package(pybind11 REQUIRED)
 find_package(Python REQUIRED COMPONENTS Interpreter Development)
 
-pybind11_add_module(_elephant_joke src/elephant_joke.cpp)
+pybind11_add_module(elephant_joke_module src/elephant_joke.cpp)
 
-target_include_directories(_elephant_joke PRIVATE ${Python_INCLUDE_DIRS})
+target_include_directories(elephant_joke_module PRIVATE ${Python_INCLUDE_DIRS})
 
-install(TARGETS _elephant_joke
+install(TARGETS elephant_joke_module
   LIBRARY DESTINATION elephant_joke
 )
