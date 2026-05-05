@@ -47,11 +47,19 @@ pip install elephant_joke-*.whl
 
 ## Deployment
 
-> **Hinweis:** Dies ist eine von Mistral Vibe codierte Lösung. Der Upload zu PyPI erfolgt automatisch über GitHub Actions bei Tag-Push (siehe `.github/workflows/wheels.yml`).
+> **Hinweis:** Dies ist eine von Mistral Vibe codierte Lösung. Der Upload zu PyPI erfolgt automatisch über GitHub Actions bei Tag-Push oder manuell per Workflow-Dispatch (siehe `.github/workflows/wheels.yml`).
+
+**Voraussetzung für CI-Deployment:**
+- PyPI API Token als GitHub Secret `PYPI_API_TOKEN` hinterlegen (Settings → Secrets and variables → Actions)
 
 Manual upload to PyPI:
 ```bash
 python -m pip install build twine
 python -m build
 python -m twine upload dist/* --username __token__ --password YOUR_PYPI_API_TOKEN
+```
+
+Test-PyPI verwenden:
+```bash
+python -m twine upload dist/* --username __token__ --password YOUR_TESTPYPI_API_TOKEN --repository testpypi
 ```
