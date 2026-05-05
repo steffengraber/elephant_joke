@@ -20,4 +20,3 @@ regex = "^(?P<major>\\d+)\\.(?P<minor>\\d+)(?:_(?P<prerelease>[a-z]+)(?P<prenum>
 result = "{major}.{minor}.{prerelease}{prenum}"
 
 [tool.scikit-build.cmake]
-define = {ELEPHANT_JOKE_VERSION="3.10_rc2"}
