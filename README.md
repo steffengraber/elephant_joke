@@ -44,3 +44,14 @@ Install from wheel:
 ```bash
 pip install elephant_joke-*.whl
 ```
+
+## Deployment
+
+> **Hinweis:** Dies ist eine von Mistral Vibe codierte Lösung. Der Upload zu PyPI erfolgt automatisch über GitHub Actions bei Tag-Push (siehe `.github/workflows/wheels.yml`).
+
+Manual upload to PyPI:
+```bash
+python -m pip install build twine
+python -m build
+python -m twine upload dist/* --username __token__ --password YOUR_PYPI_API_TOKEN
+```
