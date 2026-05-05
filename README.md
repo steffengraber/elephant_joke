@@ -2,6 +2,8 @@
 
 A minimal CMake + Python example project using scikit-build-core.
 
+> **Hinweis:** Dies ist eine kleine Testversion. Hier wird das Verhalten von dynamischer Versionierung auf PyPI getestet.
+
 ## Installation
 
 ```bash
