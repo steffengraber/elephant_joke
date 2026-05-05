@@ -1,0 +1,20 @@
+[build-system]
+requires = ["scikit-build-core>=0.5"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "elephant-joke"
+dynamic = ["version"]
+description = "A minimal C++ extension with an elephant joke"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Developer", email = "dev@example.com"}
+]
+
+[tool.scikit-build]
+version-file = "VERSION"
+
+[tool.scikit-build.cmake]
+define = {ELEPHANT_JOKE_VERSION="3.10_rc2"}

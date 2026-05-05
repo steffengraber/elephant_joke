@@ -1,0 +1,8 @@
+_elephant_joke*.so
+__pycache__/
+*.egg-info/
+build/
+dist/
+.installed.cfg
+.pytest_cache/
+.Cache
