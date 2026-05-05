@@ -15,8 +15,8 @@ authors = [
 
 [tool.scikit-build]
 version-file = "VERSION"
-version-regex = "_"
-version-replacement = "."
+version-regex = "_(rc|dev|a|b)(\d*)"
+version-replacement = ".\\1\\2"
 
 [tool.scikit-build.cmake]
 define = {ELEPHANT_JOKE_VERSION="3.10_rc2"}
