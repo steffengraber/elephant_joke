@@ -16,7 +16,7 @@ authors = [
 [tool.scikit-build.metadata.version]
 provider = "scikit_build_core.metadata.regex"
 input = "VERSION"
-regex = "^(?P<major>\\d+)\\.(?P<minor>\\d+)_(?P<suffix>[a-zA-Z][a-zA-Z0-9]*)\\s*$"
-result = "{major}.{minor}.{suffix}"
+regex = "^(?P<major>\\d+)\\.(?P<minor>\\d+)(?:_(?P<prerelease>[a-z]+)(?P<prenum>\\d+)|_(?P<dev>dev\\d+))\\s*$"
+result = "{major}.{minor}.0{prerelease}{prenum}"
 
 [tool.scikit-build.cmake]
