@@ -2,8 +2,9 @@ cmake_minimum_required(VERSION 3.15)
 
 project(elephant_joke LANGUAGES CXX)
 
+# Use pybind11's built-in Python detection
+set(PYBIND11_FINDPYTHON ON)
 find_package(pybind11 REQUIRED)
-find_package(Python REQUIRED COMPONENTS Interpreter Development)
 
 pybind11_add_module(elephant_joke_module src/elephant_joke.cpp)
 
